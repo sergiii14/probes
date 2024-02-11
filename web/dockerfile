@@ -1,0 +1,7 @@
+From php:apache
+
+RUN apt-get update \
+    && apt-get install -y default-mysql-client \
+    && docker-php-ext-install mysqli pdo_mysql
+
+RUN service apache2 restart
